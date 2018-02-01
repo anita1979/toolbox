@@ -1,0 +1,54 @@
+body{
+    background-color: #eee;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    height: 100vh;
+}
+.flexwrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+flexItems{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+main{
+    flex-direction: row;
+    flex-flow: row wrap;
+    flex:1;
+    background-image: url("img/img1.jpg");  
+    background-repeat: no-repeat;     
+}
+footer{
+    background-color: grey;
+    color:white;
+    font-size: 0.75rem;
+    min-height: 0.75rem;
+    justify-content: space-around;
+    padding: 0 1rem;
+}
+.foco{
+    width: 100%;
+    background-color: white;
+}
+header{
+    flex:1;
+    min-height: 10rem;
+    background-image: url('http://www.uma.pt/portal/imagens/UMaBanner25.jpg'); 
+    background-size: cover;
+}
+ul.nav { 
+	margin:0; 
+	padding:0;
+	}
+	
+ul.nav li {
+	list-style:none;	
+	display:inline;
+	}
+ul.nav li a {
+	float:left;
+	}

@@ -1,0 +1,114 @@
+body{
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding: 0;
+}
+.gridwrapper{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-gap:1px;
+    grid-template-columns:2fr 2fr 1fr;
+    grid-template-rows:10rem 2.75rem 10rem auto 2.75rem;
+grid-template-areas: "header header header"
+                    "nav nav nav"
+                    "foco foco links"
+                    "ultimas agenda links"
+                    "footer footer footer";
+}
+header{
+    grid-area: header;
+    grid-column: 1/ span3;
+    grid-row: 1/2;
+}
+nav{
+    grid-area: nav;
+    display: grid;
+    grid-auto-flow: column;
+    align-content: space-evenly;
+}
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-auto-flow: column;
+    align-content: space-between;
+}
+.foco{
+    grid-area: foco;
+}
+.ultimas{
+    grid-area: ultimas;
+}
+.agenda{
+    grid-area: agenda;
+}
+.links{
+    grid-area: links;
+}
+.gridItems{
+    background-color: white;
+}
+@supports(display: grid){
+ .gridwrapper{
+     height: 100vh;
+     width: 100%;
+     display: grid;
+     grid-gap: 1px;
+     grid-template-columns: 2fr 2fr 1fr;
+     grid-auto-rows: 10rem 2.75rem 2.75rem 10rem auto 2.75rem;
+ }
+    .gridItems{
+    background-color:  steelblue;
+    }
+    header{
+        
+        height: unset;
+        grid-auto-columns: 1/4;
+        grid-row: 1/4;
+        background-image: url('http://www.uma.pt/portal/imagens/UMaBanner25.jpg');
+        background-size: cover;
+    }
+    nav{
+        display: grid;
+        grid-auto-flow: column;
+        align-content: space-evenly;
+        grid-column: 1/3;
+        grid-row: 2/3;
+        background-color: black;
+        padding: 0 0.75rem 0 0.75rem;
+    }
+    .LastItem{
+        margin-left: auto;
+    }
+    .foco{
+       grid-column: 1/3;
+       grid-row: 4/5;
+    }
+
+    .agenda{
+        width: 100%;
+        grid-column: 2 / 3;
+        grid-row: 5/6;
+    }
+    .ultimas{
+        width:100%;
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    .links{
+        width: 100%;
+        grid-column: 3 / 4;
+        grid-row: 4/6;
+    }
+    footer{
+        display: grid;
+        grid-auto-flow: column;
+        align-content: space-between;
+        position: static;
+        grid-column: 1/4;
+        grid-row: 6/7;
+    }
+   
+}
+
